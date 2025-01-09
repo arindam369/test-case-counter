@@ -11,13 +11,24 @@
     },
     "keywords": [
         "git",
+        "java",
         "test",
         "count",
+        "counter",
         "cli"
     ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/arindam369/test-case-counter.git"
+    },
     "author": "Arindam Halder",
     "license": "MIT",
     "dependencies": {
         "commander": "^10.0.0"
-    }
+    },
+    "files": [
+        "bin/",
+        "src/",
+        "README.md"
+    ]
 }

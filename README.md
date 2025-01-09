@@ -12,7 +12,7 @@ Install the package globally using npm:
 npm install -g test-case-counter
 ```
 
-Install the package globally using npm:
+Run the test-case-counter command from the CLI:
 
 ```bash
 test-case-counter -a <author> -s <start_date> -e <end_date> [-x <extensions>] [-t <target>]
