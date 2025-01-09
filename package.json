@@ -1,0 +1,23 @@
+{
+    "name": "test-case-counter",
+    "version": "1.0.0",
+    "description": "Count the testcases written by a specific author in a Git repository over a date range.",
+    "main": "src/index.js",
+    "bin": {
+        "test-case-counter": "bin/cli.js"
+    },
+    "scripts": {
+        "test": "node bin/cli.js --help"
+    },
+    "keywords": [
+        "git",
+        "test",
+        "count",
+        "cli"
+    ],
+    "author": "Arindam Halder",
+    "license": "MIT",
+    "dependencies": {
+        "commander": "^10.0.0"
+    }
+}
