@@ -8,15 +8,15 @@
 
 - Install the [test-case-counter](https://www.npmjs.com/package/test-case-counter) package globally
 
-```bash
-npm install -g test-case-counter
-```
+  ```bash
+  npm install -g test-case-counter
+  ```
 
 - Navigate to the directory of your Java project where the test cases are written, ensure that project is a git repository with commits properly tracked, use the test-case-counter command to analyze the testcases
 
-```bash
-test-case-counter -a <author> -s <start_date> -e <end_date> [-x <extensions>] [-t <target>]
-```
+  ```bash
+  test-case-counter -a <author> -s <start_date> -e <end_date> [-x <extensions>] [-t <target>]
+  ```
 
 ## Options
 
@@ -30,7 +30,7 @@ test-case-counter -a <author> -s <start_date> -e <end_date> [-x <extensions>] [-
 
 ## Example
 
-- Count test cases by "Arindam Halder" between Jan 1, 2025 and Jan 10, 2025
+- *Count test cases by "Arindam Halder" between Jan 1, 2025 and Jan 10, 2025*
 
   ```bash
   test-case-counter -a "Arindam Halder" -s 2025-01-01 -e 2025-01-10
@@ -47,7 +47,7 @@ test-case-counter -a <author> -s <start_date> -e <end_date> [-x <extensions>] [-
   +===============================================+
   ```
 
-- Count test cases by "Arindam Halder" in files with .java and .kt extensions
+- *Count test cases by "Arindam Halder" in files with .java and .kt extensions*
   ```bash
   test-case-counter -a "Arindam Halder" -s 2025-01-01 -e 2025-01-10 -x .java,.kt
   ```
@@ -63,7 +63,7 @@ test-case-counter -a <author> -s <start_date> -e <end_date> [-x <extensions>] [-
   +===============================================+
   ```
 
-- Count test cases by "Arindam Halder" in the "Spring-Data-Jpa" subfolder
+- *Count test cases by "Arindam Halder" in the "Spring-Data-Jpa" subfolder*
   ```bash
   test-case-counter -a "Arindam Halder" -s 2025-01-01 -e 2025-01-10 -t Spring-Data-Jpa
   ```

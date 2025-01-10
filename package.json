@@ -1,6 +1,6 @@
 {
     "name": "test-case-counter",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Count the Java test cases written by a specific Git user in a Git repository over a date range.",
     "main": "src/index.js",
     "bin": {
@@ -12,8 +12,7 @@
     "keywords": [
         "git",
         "java",
-        "test",
-        "count",
+        "testcase",
         "counter",
         "cli"
     ],
