@@ -1,27 +1,28 @@
 # Test Case Counter
 
-A CLI tool to count the number of Java test cases written by a specific Git user in a Git repository over a specified date range. It supports filtering by file extensions and target subfolders.
+*A CLI tool to count the number of Java test cases written by a specific git user in a repository over a specified date range. It supports filtering by file extensions and target subfolders.*
 
 ---
 
 ## Usage
 
-Install the package globally using npm:
+- Install the [test-case-counter](https://www.npmjs.com/package/test-case-counter) package globally
 
 ```bash
 npm install -g test-case-counter
 ```
 
-Run the test-case-counter command from the CLI:
+- Navigate to the directory of your Java project where the test cases are written, ensure that project is a git repository with commits properly tracked, use the test-case-counter command to analyze the testcases
 
 ```bash
 test-case-counter -a <author> -s <start_date> -e <end_date> [-x <extensions>] [-t <target>]
 ```
+
 ## Options
 
 | **Option**             | **Description**                                                                 |
 |------------------------|---------------------------------------------------------------------------------|
-| `-a, --author`         | (Required) Author name (Git)                   |
+| `-a, --author`         | (Required) Name of the git user                   |
 | `-s, --start`          | (Required) Start date in `YYYY-MM-DD` format                                   |
 | `-e, --end`            | (Required) End date in `YYYY-MM-DD` format                                     |
 | `-x, --extensions`     | File extensions to filter by (comma-separated). Default: `.java`               |
@@ -29,18 +30,52 @@ test-case-counter -a <author> -s <start_date> -e <end_date> [-x <extensions>] [-
 
 ## Example
 
-- **Count test cases by "John Doe" between Jan 1, 2024, and Jan 10, 2024:**
+- Count test cases by "Arindam Halder" between Jan 1, 2025 and Jan 10, 2025
 
   ```bash
-  test-case-counter -a "John Doe" -s 2024-01-01 -e 2024-01-10
+  test-case-counter -a "Arindam Halder" -s 2025-01-01 -e 2025-01-10
   ```
 
-- **Count test cases by "John Doe" in files with .java and .kt extensions:**
   ```bash
-  test-case-counter -a "Jane Doe" -s 2024-01-01 -e 2024-01-10 -x .java,.kt
+  +===============================================+
+  |               Test Case Counter               |
+  +===============================================+
+  | Author:            Arindam Halder             |
+  | Date range:        2025-01-01 - 2025-01-10    |
+  +-----------------------------------------------+
+  | Total test cases written:  21                 |
+  +===============================================+
   ```
 
-- **Count test cases by "John Doe" in the src/test subfolder:**
+- Count test cases by "Arindam Halder" in files with .java and .kt extensions
   ```bash
-  test-case-counter -a "Jane Doe" -s 2024-01-01 -e 2024-01-10 -t src/test
+  test-case-counter -a "Arindam Halder" -s 2025-01-01 -e 2025-01-10 -x .java,.kt
+  ```
+
+  ```bash
+  +===============================================+
+  |               Test Case Counter               |
+  +===============================================+
+  | Author:            Arindam Halder             |
+  | Date range:        2025-01-01 - 2025-01-10    |
+  +-----------------------------------------------+
+  | Total test cases written:  21                 |
+  +===============================================+
+  ```
+
+- Count test cases by "Arindam Halder" in the "Spring-Data-Jpa" subfolder
+  ```bash
+  test-case-counter -a "Arindam Halder" -s 2025-01-01 -e 2025-01-10 -t Spring-Data-Jpa
+  ```
+
+  ```bash
+  +===============================================+
+  |               Test Case Counter               |
+  +===============================================+
+  | Author:            Arindam Halder
+  | Date range:        2025-01-01 - 2025-01-10
+  | Target subfolder:  Spring-Data-Jpa
+  +-----------------------------------------------+
+  | Total testcases written:  18
+  +===============================================+
   ```
