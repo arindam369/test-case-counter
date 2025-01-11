@@ -9,10 +9,10 @@ program
   .description(
     "Count the Java test cases written by a specific Git user in a Git repository over a date range."
   )
-  .version("1.0.0")
+  .version("1.0.2")
   .requiredOption("-a, --author <name>", "Author name (Git)")
-  .requiredOption("-s, --start <date>", "Start date (YYYY-MM-DD)")
-  .requiredOption("-e, --end <date>", "End date (YYYY-MM-DD)")
+  .requiredOption("-s, --start <date>", "Start date (DD-MM-YYYY)")
+  .requiredOption("-e, --end <date>", "End date (DD-MM-YYYY)")
   .option("-x, --extensions <ext>", "File extensions to filter (comma-separated)", ".java")
   .option("-t, --target <subfolder>", "Target subfolder to filter files", "")
   .parse(process.argv);

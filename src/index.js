@@ -2,13 +2,14 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 const validateDateRange = require("./utils/validateDateRange");
+const convertDateToISO = require("./utils/convertDateToISO");
 
 /**
  * Count the testcases written by a specific author in a Git repository over a date range.
  * 
  * @param {string} authorName - The name of the author (Git).
- * @param {string} startDate - The start date in YYYY-MM-DD format.
- * @param {string} endDate - The end date in YYYY-MM-DD format.
+ * @param {string} startDate - The start date in DD-MM-YYYY format.
+ * @param {string} endDate - The end date in DD-MM-YYYY format.
  * @param {string[]} extensions - File extensions to filter (e.g., [".java"]).
  * @param {string} targetSubfolder - Subfolder to filter files.
  * @returns {number} The number of test cases.
@@ -17,6 +18,10 @@ function countTestCases(authorName, startDate, endDate, extensions, targetSubfol
     
     // Validate the date range
     validateDateRange(startDate, endDate);
+
+    // Convert dates to YYYY-MM-DD format
+    const isoStartDate = convertDateToISO(startDate);
+    const isoEndDate = convertDateToISO(endDate);
 
     // Get the root directory of the Git repository
     let repoRoot;
@@ -32,7 +37,7 @@ function countTestCases(authorName, startDate, endDate, extensions, targetSubfol
 
     try {
         gitLogOutput = execSync(
-            `git log --author="${authorName}" --since="${startDate}" --until="${endDate}" --name-only`,
+            `git log --author="${authorName}" --since="${isoStartDate}" --until="${isoEndDate}" --name-only`,
             { cwd: repoRoot }
         ).toString();
     } catch (err) {

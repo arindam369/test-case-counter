@@ -23,8 +23,8 @@
 | **Option**             | **Description**                                                                 |
 |------------------------|---------------------------------------------------------------------------------|
 | `-a, --author`         | (Required) Name of the git user                   |
-| `-s, --start`          | (Required) Start date in `YYYY-MM-DD` format                                   |
-| `-e, --end`            | (Required) End date in `YYYY-MM-DD` format                                     |
+| `-s, --start`          | (Required) Start date in `DD-MM-YYYY` format                                   |
+| `-e, --end`            | (Required) End date in `DD-MM-YYYY` format                                     |
 | `-x, --extensions`     | File extensions to filter by (comma-separated). Default: `.java`               |
 | `-t, --target`         | Subfolder to filter files.                                            |
 
@@ -33,39 +33,39 @@
 - *Count test cases by "Arindam Halder" between Jan 1, 2025 and Jan 10, 2025*
 
   ```bash
-  test-case-counter -a "Arindam Halder" -s 2025-01-01 -e 2025-01-10
+  test-case-counter -a "Arindam Halder" -s 01-01-2025 -e 10-01-2025
   ```
 
   ```bash
   +===============================================+
   |               Test Case Counter               |
   +===============================================+
-  | Author:            Arindam Halder             |
-  | Date range:        2025-01-01 - 2025-01-10    |
+  | Author:            Arindam Halder             
+  | Date range:        01-01-2025 - 10-01-2025    
   +-----------------------------------------------+
-  | Total test cases written:  21                 |
+  | Total test cases written:  21                 
   +===============================================+
   ```
 
 - *Count test cases by "Arindam Halder" in files with .java and .kt extensions*
   ```bash
-  test-case-counter -a "Arindam Halder" -s 2025-01-01 -e 2025-01-10 -x .java,.kt
+  test-case-counter -a "Arindam Halder" -s 01-01-2025 -e 10-01-2025 -x .java,.kt
   ```
 
   ```bash
   +===============================================+
   |               Test Case Counter               |
   +===============================================+
-  | Author:            Arindam Halder             |
-  | Date range:        2025-01-01 - 2025-01-10    |
+  | Author:            Arindam Halder             
+  | Date range:        01-01-2025 - 10-01-2025    
   +-----------------------------------------------+
-  | Total test cases written:  21                 |
+  | Total test cases written:  21                 
   +===============================================+
   ```
 
 - *Count test cases by "Arindam Halder" in the "Spring-Data-Jpa" subfolder*
   ```bash
-  test-case-counter -a "Arindam Halder" -s 2025-01-01 -e 2025-01-10 -t Spring-Data-Jpa
+  test-case-counter -a "Arindam Halder" -s 01-01-2025 -e 10-01-2025 -t Spring-Data-Jpa
   ```
 
   ```bash
@@ -73,7 +73,7 @@
   |               Test Case Counter               |
   +===============================================+
   | Author:            Arindam Halder
-  | Date range:        2025-01-01 - 2025-01-10
+  | Date range:        01-01-2025 - 10-01-2025
   | Target subfolder:  Spring-Data-Jpa
   +-----------------------------------------------+
   | Total testcases written:  18
