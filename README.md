@@ -26,11 +26,11 @@
 | `-s, --start`          | (Required) Start date in `DD-MM-YYYY` format                                   |
 | `-e, --end`            | (Required) End date in `DD-MM-YYYY` format                                     |
 | `-x, --extensions`     | File extensions to filter by (comma-separated). Default: `.java`               |
-| `-t, --target`         | Subfolder to filter files.                                            |
+| `-t, --target`         | Subfolder to filter files                                            |
 
 ## Example
 
-- *Count test cases by "Arindam Halder" between Jan 1, 2025 and Jan 10, 2025*
+- *Count testcases by "Arindam Halder" between Jan 1, 2025 and Jan 10, 2025*
 
   ```bash
   test-case-counter -a "Arindam Halder" -s 01-01-2025 -e 10-01-2025
@@ -43,11 +43,11 @@
   | Author:            Arindam Halder             
   | Date range:        01-01-2025 - 10-01-2025    
   +-----------------------------------------------+
-  | Total test cases written:  21                 
+  | Total testcases written:  21                 
   +===============================================+
   ```
 
-- *Count test cases by "Arindam Halder" in files with .java and .kt extensions*
+- *Count testcases by "Arindam Halder" in files with .java and .kt extensions*
   ```bash
   test-case-counter -a "Arindam Halder" -s 01-01-2025 -e 10-01-2025 -x .java,.kt
   ```
@@ -59,11 +59,11 @@
   | Author:            Arindam Halder             
   | Date range:        01-01-2025 - 10-01-2025    
   +-----------------------------------------------+
-  | Total test cases written:  21                 
+  | Total testcases written:  21                 
   +===============================================+
   ```
 
-- *Count test cases by "Arindam Halder" in the "Spring-Data-Jpa" subfolder*
+- *Count testcases by "Arindam Halder" in the "Spring-Data-Jpa" subfolder*
   ```bash
   test-case-counter -a "Arindam Halder" -s 01-01-2025 -e 10-01-2025 -t Spring-Data-Jpa
   ```

@@ -9,7 +9,7 @@ program
   .description(
     "Count the Java test cases written by a specific Git user in a Git repository over a date range."
   )
-  .version("1.0.2")
+  .version("1.0.3")
   .requiredOption("-a, --author <name>", "Author name (Git)")
   .requiredOption("-s, --start <date>", "Start date (DD-MM-YYYY)")
   .requiredOption("-e, --end <date>", "End date (DD-MM-YYYY)")

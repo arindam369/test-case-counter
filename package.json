@@ -1,6 +1,6 @@
 {
     "name": "test-case-counter",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Count the Java test cases written by a specific Git user in a Git repository over a date range.",
     "main": "src/index.js",
     "bin": {
